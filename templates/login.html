@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Garage</title>
+    
+    <!-- Link to Bootstrap and custom CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <style>
+        /* Full height for body and html */
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Background image for login page */
+        .login-bg {
+            background-image: url('path_to_your_image.jpg'); /* Replace with your background image */
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: calc(100vh - 120px); /* Adjust for header and footer */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Login form container */
+        .login-form-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Form styling */
+        .login-form h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .login-form .form-control {
+            margin: 10px auto;
+            padding: 10px;
+            font-size: 16px;
+            text-align: center;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .btnSubmit {
+            background-color: #007bff;
+            border-color: #007bff;
+            color: #fff;
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            max-width: 300px;
+            margin: 20px auto;
+            cursor: pointer;
+        }
+
+        .btnSubmit:hover {
+            background-color: #0056b3;
+        }
+
+        /* Forget password link */
+        .ForgetPwd {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            color: #007bff;
+        }
+
+        .ForgetPwd:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        /* Fixing header and footer positions */
+        header, footer {
+            position: relative;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header section -->
+    <header>
+        {% include 'header.html' %}
+    </header>
+
+    <!-- Main Content -->
+    <div class="login-bg">
+        <div class="login-form-container">
+            <h3>Login</h3>
+            {% if error %}
+            <div class="alert alert-danger">{{ error }}</div>
+            {% endif %}
+            <form method="POST" action="login.html">
+                <div class="form-group">
+                    <input type="text" name="username" class="form-control" placeholder="Your Username *" required />
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" class="form-control" placeholder="Your Password *" required />
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btnSubmit" value="Login" />
+                </div>
+                <div class="form-group text-center">
+                    <a href="#" class="ForgetPwd">Forget Password?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer section -->
+    <footer>
+        {% include 'footer.html' %}
+    </footer>
+
+    <!-- JS files -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+</body>
+</html>

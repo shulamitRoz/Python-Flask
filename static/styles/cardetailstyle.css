@@ -1,0 +1,56 @@
+@font-face {
+    font-family: "OpenSans-Light";
+    src: url(../source/fonts/OpenSans-Light.ttf) format("truetype");
+}
+
+.car-details {
+    margin-bottom: 0;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.details-form > h1 {
+    margin-bottom: 20px;
+    font-family: "OpenSans-Light";
+    font-size: 36px;
+    color: #333;
+}
+
+.group-coustume {
+    margin: 0 auto;
+    display: inline-block;
+    text-align: left;
+}
+
+.group-coustume p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin: 10px 0;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.leftside > img {
+    display: none;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

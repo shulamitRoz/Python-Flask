@@ -1,0 +1,153 @@
+/* mystyle.css */
+
+@font-face {
+    font-family: "OpenSans-Light";
+    src: url(../source/fonts/OpenSans-Light.ttf) format("truetype");
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f3f3f3;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    background: #333333;
+    color: white;
+    height: 50px;
+    z-index: 1000;
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
+}
+
+.header ul.socialicon {
+    list-style: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.header ul.socialicon li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.header ul.socialicon li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.header ul.givusacall {
+    list-style: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.header ul.givusacall li {
+    display: inline;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.header ul.logreg {
+    list-style: none;
+    position: absolute;
+    top: 10px;
+    right: 150px;
+}
+
+.header ul.logreg li {
+    display: inline;
+    margin-left: 10px;
+}
+
+.header ul.logreg li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.navbar-default .navbar-brand {
+    color: #333333;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #333333;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #333333;
+}
+
+/* loginstyle.css */
+
+.login-container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.login-form {
+    padding: 5%;
+    background: #ffffff;
+    box-shadow: 0px 0px 3px 0px #000000;
+    border-radius: 10px;
+}
+
+.login-form h3 {
+    text-align: center;
+    color: #333333;
+}
+
+.login-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.login-container .form-control {
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.btnSubmit {
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #0062cc;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.ForgetPwd {
+    color: #0062cc;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.footer {
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer .copyright {
+    margin: 0;
+}
+
+.footer .atisda {
+    margin: 0;
+}

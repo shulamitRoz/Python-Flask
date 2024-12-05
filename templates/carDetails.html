@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Car Details - Garage</title>
+    <meta name="description" content="Car details page template.">
+    <meta name="author" content="Web Domus Italia">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Add the common CSS files for consistency -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <style>
+        /* Full height for body and html */
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Background image for the car details page */
+        .car-details-bg {
+            background-image: url('path_to_your_sport_car_image.jpg'); /* Change to your sports car image */
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Car details form container */
+        .details-form-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Car details form styling */
+        .details-form h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .group-coustume p {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .group-coustume p strong {
+            font-size: 20px;
+        }
+
+        /* Styling for labels (e.g., Model, Style) */
+        .group-coustume p {
+            font-weight: bold;
+        }
+
+        /* Additional spacing for the car details */
+        .car-details {
+            margin-top: 30px;
+        }
+
+        /* Car image styling */
+        .car-image {
+            width: 100%;
+            max-width: 300px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Header section from Carvilla template -->
+    {% include 'header.html' %}
+
+    <!-- Main Car Details Content -->
+    <div class="car-details-bg">
+        <div class="details-form-container">
+            <h3>Car Details</h3>
+            <div class="form-group group-coustume">
+                <p><strong>Model:</strong> {{ car.model }}</p>
+                <p><strong>Style:</strong> {{ car.style }}</p>
+                <p><strong>Color:</strong> {{ car.color }}</p>
+                <p><strong>Price:</strong> {{ car.price }} €</p>
+                <p><strong>Suppliers:</strong> {{ car.suppliers }}</p>
+                <!-- Display the car image -->
+                <img src="{{ car.car_image }}" alt="Image of {{ car.model }}" class="car-image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer section from Carvilla template -->
+    {% include 'footer.html' %}
+
+    <!-- JS files -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+</body>
+
+</html>
